@@ -85,7 +85,7 @@ UpdateZshConfig () {
 
     cp ./assets/img/wallpaper_neofetch.png "$DIR_WALLNEO/"
 
-    if [[ ! -f "$ZSHCONF_PATH" ]]; then
+    if [[ -f "$ZSHCONF_PATH" ]]; then
         echo -e "# MY ALIASES\nalias neofetch=\"neofetch --w3m $IMAGE_NEOFETCH\"\n\n# DISPLAY BANNER\nneofetch" >> $ZSHCONF_PATH
     fi
 }
